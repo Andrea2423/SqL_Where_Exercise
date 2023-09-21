@@ -1,0 +1,43 @@
+Exercise 3
+CREATE TABLE MEAL (
+  NAME VARCHAR(255),
+  PRICE DOUBLE, 
+  CALORIES INT
+);
+
+INSERT INTO MEAL(NAME, PRICE, CALORIES)
+VALUES ('Spaghetti Bolognese', 12.99, 600),
+('Grilled Chicken Sandwich', 8.99, 400),
+('Pesto Pasta', 10.99, 550),
+('Steak and Mash', 19.99, 800),
+('Sushi Platter', 15.99, 700);
+
+Using a SELECT statement with a WHERE clause, retrieve all meals that have a price less than €15
+SELECT * FROM MEAL WHERE PRICE <=15;
+
+Using a SELECT statement with a WHERE clause, retrieve all ingredients that are vegetarian.
+SELECT * FROM INGREDIENT WHERE VEGETARIAN=TRUE;
+
+Using a SELECT statement with a WHERE clause, retrieve all meals that have more than 500 calories.
+SELECT * FROM MEAL WHERE CALORIES>500;
+
+Using a SELECT statement with a WHERE clause, retrieve all meals that have a price between €15 and €16.
+SELECT * FROM MEAL WHERE PRICE BETWEEN 15 AND 16;
+
+Using a SELECT statement with a WHERE clause, retrieve all ingredients that are both lactose-free (note lactose FREE) and gluten-free.
+SELECT * FROM INGREDIENT WHERE CONTAINS_LACTOSE= FALSE AND GLUTEN_FREE=TRUE;
+
+Using a SELECT statement with a WHERE clause and logical operator(s), retrieve all meals that have a price less than €15 or more than 600 calories.
+SELECT * FROM MEAL WHERE PRICE <15 OR CALORIES > 600;
+
+Using a SELECT statement with a WHERE clause, retrieve all ingredients that are vegan or gluten-free
+SELECT * FROM INGREDIENT WHERE VEGAN= TRUE OR GLUTEN_FREE= TRUE; 
+
+Using a SELECT statement with a WHERE clause, retrieve all meals with the name 'Pesto Pasta'
+SELECT * FROM MEAL WHERE NAME = 'Pesto Pasta';
+
+Using a SELECT statement with a WHERE clause, retrieve all ingredients that are not lactose-free
+SELECT * FROM INGREDIENT WHERE CONTAINS_LACTOSE=TRUE;
+
+Using a SELECT statement with a WHERE clause and a logical operator, retrieve all meals that have a price more than €20 and less than 800 calories.
+SELECT * FROM MEAL WHERE PRICE > 20 AND CALORIES < 800;
